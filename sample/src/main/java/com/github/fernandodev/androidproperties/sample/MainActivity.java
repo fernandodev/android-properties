@@ -1,36 +1,37 @@
 package com.github.fernandodev.androidproperties.sample;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.ActionBarActivity;
+import android.widget.TextView;
+
+import com.github.fernandodev.androidproperties.lib.AssetsProperties;
 
 
 public class MainActivity extends ActionBarActivity {
+  Config myConfig;
+  AnotherConfig anotherConfig;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    myConfig = new Config(this);
+    anotherConfig = new AnotherConfig(this);
 
+    TextView configView = (TextView) findViewById(R.id.values_for_config);
+    TextView anotherView = (TextView) findViewById(R.id.values_for_another);
+    configView.setText(
+        "message : " + myConfig.message + "\n" +
+            "max : " + myConfig.max + "\n" +
+            "rate_value : " + myConfig.rateValue + "\n" +
+            "temperature : " + myConfig.temperature + "\n"
+    );
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+    anotherView.setText(
+        "staging_url : " + anotherConfig.stagingUrl + "\n" +
+            "production_url : " + anotherConfig.productionUrl + "\n" +
+            "token_url : " + anotherConfig.token + "\n" +
+            "max_messages_count : " + anotherConfig.maxMessagesCount
+    );
+  }
 }
