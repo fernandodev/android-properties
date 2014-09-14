@@ -9,7 +9,19 @@ You just have to extends from AssetsProperties and use `@Property` annotation to
 
 ## Installation
 
-.... under construction .....
+It's very simple with gradle ;)
+
+Add mavenCentral as repository source:
+
+repositories {
+  mavenCentral()
+}
+
+And finnaly add this line inside dependencies { } section:
+
+compile 'com.github.fernandodev.androidproperties:androidproperties:+'
+
+The + symbol indicates to gradle to get the latest version.
 
 * See the sample if there are any doubts.
 
