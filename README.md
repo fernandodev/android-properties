@@ -1,4 +1,4 @@
-Android @Properties[![Build Status](https://travis-ci.org/fernandodev/android-properties.svg)](https://travis-ci.org/fernandodev/android-properties)
+Android @Properties[![Build Status](https://travis-ci.org/fernandodev/android-properties.svg)](https://travis-ci.org/fernandodev/android-properties)[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-android--properties-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/938)
 ==
 
 ![Imgur](http://i.imgur.com/UsSJEIB.jpg)
