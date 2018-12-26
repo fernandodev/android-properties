@@ -22,7 +22,7 @@ repositories {
 And finnaly add this line inside `dependencies { }` section:
 
 ```gradle
-compile 'com.github.fernandodev.androidproperties:androidproperties:+'
+implementation 'com.github.fernandodev.androidproperties:androidproperties:+'
 ```
 
 The `+` symbol indicates to gradle to get the latest version.
